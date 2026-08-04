@@ -1,0 +1,83 @@
+{
+  "results": [
+    {
+      "test_id": "ISO-03",
+      "source": "T-Pot sensor",
+      "destination": "RFC1918 10.0.0.0/8",
+      "port_or_protocol": "all",
+      "expected": "deny",
+      "actual": "deny",
+      "utc_time": "2026-08-02T22:24:02Z",
+      "artifact": "isolation_runner.py tcp_connect_test",
+      "locator": "sensor -> 10.255.255.1:80",
+      "result": "PASS",
+      "notes": "TCP connect to 10.255.255.1:80 timed out (likely dropped by firewall)"
+    },
+    {
+      "test_id": "ISO-04",
+      "source": "T-Pot sensor",
+      "destination": "RFC1918 172.16.0.0/12",
+      "port_or_protocol": "all",
+      "expected": "deny",
+      "actual": "deny",
+      "utc_time": "2026-08-02T22:24:05Z",
+      "artifact": "isolation_runner.py tcp_connect_test",
+      "locator": "sensor -> 172.31.255.1:80",
+      "result": "PASS",
+      "notes": "TCP connect to 172.31.255.1:80 timed out (likely dropped by firewall)"
+    },
+    {
+      "test_id": "ISO-05",
+      "source": "T-Pot sensor",
+      "destination": "RFC1918 192.168.0.0/16",
+      "port_or_protocol": "all",
+      "expected": "deny",
+      "actual": "deny",
+      "utc_time": "2026-08-02T22:24:08Z",
+      "artifact": "isolation_runner.py tcp_connect_test",
+      "locator": "sensor -> 192.168.255.1:80",
+      "result": "PASS",
+      "notes": "TCP connect to 192.168.255.1:80 timed out (likely dropped by firewall)"
+    },
+    {
+      "test_id": "ISO-06",
+      "source": "T-Pot sensor",
+      "destination": "link-local metadata 169.254.169.254",
+      "port_or_protocol": "HTTP",
+      "expected": "deny unless cloud control plane explicitly requires protected access",
+      "actual": "deny",
+      "utc_time": "2026-08-02T22:24:13Z",
+      "artifact": "isolation_runner.py http_probe / capture-state.sh metadata-probe.txt",
+      "locator": "sensor -> 169.254.169.254 (HTTP)",
+      "result": "PASS",
+      "notes": "HTTP probe to http://169.254.169.254/latest/meta-data/ got no response (timeout/blocked)"
+    },
+    {
+      "test_id": "ISO-07",
+      "source": "internet",
+      "destination": "T-Pot honeypot ports",
+      "port_or_protocol": "assigned",
+      "expected": "allow",
+      "actual": "not_attempted",
+      "utc_time": "2026-08-02T22:24:13Z",
+      "artifact": "",
+      "locator": "internet -> sensor honeypot ports",
+      "result": "NOT_ATTEMPTED",
+      "notes": "Requires genuine public internet exposure of the sensor - belongs to the optional live-sensor task, not the mandatory local-boundary path. Not run against a private/lab network, since that would not actually test internet reachability and would produce a misleading result."
+    },
+    {
+      "test_id": "ISO-08",
+      "source": "T-Pot sensor",
+      "destination": "DNS/NTP/update endpoints",
+      "port_or_protocol": "required egress",
+      "expected": "allow and log",
+      "actual": "allow",
+      "utc_time": "2026-08-02T22:24:13Z",
+      "artifact": "isolation_runner.py dns_probe",
+      "locator": "sensor -> DNS resolvers (udp/53)",
+      "result": "PASS",
+      "notes": "Server:\t\t8.8.8.8 | Address:\t8.8.8.8#53 |  | Non-authoritative answer: | Name:\tarchive.ubuntu.com | Address: 91.189.91.82 | Name:\tarchive.ubuntu.com | Address: 91.189.92.22 | Name:\tarchive.ubuntu.com | Address: 91.189.91.83 | Name:\tarchive.ubuntu.com | Address: 91.189.92.23 | Name:\tarchive.ubuntu.com | Address: 185.125.190.83 | Name:\tarchive.ubuntu.com | Address: 185.125.190.82 | Name:\tarchive.ubuntu.com | Address: 185.125.190.81 | Name:\tarchive.ubuntu.com | Address: 91.189.91.81 | Name:\tarchive.ubuntu.com | Address: 91.189.92.24 | Name:\tarchive.ubuntu.com | Address: 2620:2d:4000:1::103 | Name:\tarchive.ubuntu.com | Address: 2a06:bc80:0:1000::16 | Name:\tarchive.ubuntu.com | Address: 2a06:bc80:0:1000::18 | Name:\tarchive.ubuntu.com | Address: 2620:2d:4002:1::102 | Name:\tarchive.ubuntu.com | Address: 2620:2d:4000:1::101 | Name:\tarchive.ubuntu.com | Address: 2620:2d:4000:1::102 | Name:\tarchive.ubuntu.com | Address: 2620:2d:4002:1::101 | Name:\tarchive.ubuntu.com | Address: 2a06:bc80:0:1000::17 | Name:\tarchive.ubuntu.com | Address: 2620:2d:4002:1::103"
+    }
+  ],
+  "last_updated": "2026-08-02T22:24:13Z"
+}

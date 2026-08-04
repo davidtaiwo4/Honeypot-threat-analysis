@@ -1,0 +1,663 @@
+{
+  "fixtures": [
+    {
+      "case_id": "P-SESSION-01",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-2bae4a-1",
+          "sess-2bae4a-2",
+          "sess-2bae4a-3",
+          "sess-2bae4a-4",
+          "sess-2bae4a-5",
+          "sess-2bae4a-6"
+        ],
+        "protocol": "ssh",
+        "session_count": 2
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-2bae4a-1",
+          "protocol": "ssh",
+          "src": "198.51.100.20",
+          "time": "2026-07-13T10:00:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-2bae4a-2",
+          "protocol": "ssh",
+          "src": "198.51.100.20",
+          "time": "2026-07-13T10:00:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-2bae4a-3",
+          "protocol": "ssh",
+          "src": "198.51.100.20",
+          "time": "2026-07-13T10:00:03Z"
+        },
+        {
+          "action": "connect",
+          "event_id": "sess-2bae4a-4",
+          "protocol": "ssh",
+          "src": "198.51.100.20",
+          "time": "2026-07-13T10:00:04Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-2bae4a-5",
+          "protocol": "ssh",
+          "src": "198.51.100.20",
+          "time": "2026-07-13T10:00:05Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-2bae4a-6",
+          "protocol": "ssh",
+          "src": "198.51.100.20",
+          "time": "2026-07-13T10:00:06Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-02",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-2f3be9-1",
+          "sess-2f3be9-2",
+          "sess-2f3be9-3"
+        ],
+        "protocol": "telnet",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-2f3be9-1",
+          "protocol": "telnet",
+          "src": "198.51.100.21",
+          "time": "2026-07-13T10:01:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-2f3be9-2",
+          "protocol": "telnet",
+          "src": "198.51.100.21",
+          "time": "2026-07-13T10:01:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-2f3be9-3",
+          "protocol": "telnet",
+          "src": "198.51.100.21",
+          "time": "2026-07-13T10:01:03Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-03",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-ee4fe5-1",
+          "sess-ee4fe5-2",
+          "sess-ee4fe5-3"
+        ],
+        "protocol": "http",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-ee4fe5-1",
+          "protocol": "http",
+          "src": "198.51.100.22",
+          "time": "2026-07-13T10:02:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-ee4fe5-2",
+          "protocol": "http",
+          "src": "198.51.100.22",
+          "time": "2026-07-13T10:02:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-ee4fe5-3",
+          "protocol": "http",
+          "src": "198.51.100.22",
+          "time": "2026-07-13T10:02:03Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-04",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-abd5bb-1",
+          "sess-abd5bb-2",
+          "sess-abd5bb-3"
+        ],
+        "protocol": "ssh",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-abd5bb-1",
+          "protocol": "ssh",
+          "src": "198.51.100.23",
+          "time": "2026-07-13T10:03:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-abd5bb-2",
+          "protocol": "ssh",
+          "src": "198.51.100.23",
+          "time": "2026-07-13T10:03:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-abd5bb-3",
+          "protocol": "ssh",
+          "src": "198.51.100.23",
+          "time": "2026-07-13T10:03:03Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-05",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-9ba5b6-1",
+          "sess-9ba5b6-2",
+          "sess-9ba5b6-3",
+          "sess-9ba5b6-4",
+          "sess-9ba5b6-5",
+          "sess-9ba5b6-6"
+        ],
+        "protocol": "telnet",
+        "session_count": 2
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-9ba5b6-1",
+          "protocol": "telnet",
+          "src": "198.51.100.24",
+          "time": "2026-07-13T10:04:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-9ba5b6-2",
+          "protocol": "telnet",
+          "src": "198.51.100.24",
+          "time": "2026-07-13T10:04:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-9ba5b6-3",
+          "protocol": "telnet",
+          "src": "198.51.100.24",
+          "time": "2026-07-13T10:04:03Z"
+        },
+        {
+          "action": "connect",
+          "event_id": "sess-9ba5b6-4",
+          "protocol": "telnet",
+          "src": "198.51.100.24",
+          "time": "2026-07-13T10:04:04Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-9ba5b6-5",
+          "protocol": "telnet",
+          "src": "198.51.100.24",
+          "time": "2026-07-13T10:04:05Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-9ba5b6-6",
+          "protocol": "telnet",
+          "src": "198.51.100.24",
+          "time": "2026-07-13T10:04:06Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-06",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-1f7794-1",
+          "sess-1f7794-2",
+          "sess-1f7794-3"
+        ],
+        "protocol": "http",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-1f7794-1",
+          "protocol": "http",
+          "src": "198.51.100.25",
+          "time": "2026-07-13T10:05:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-1f7794-2",
+          "protocol": "http",
+          "src": "198.51.100.25",
+          "time": "2026-07-13T10:05:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-1f7794-3",
+          "protocol": "http",
+          "src": "198.51.100.25",
+          "time": "2026-07-13T10:05:03Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-07",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-5dcb06-1",
+          "sess-5dcb06-2",
+          "sess-5dcb06-3"
+        ],
+        "protocol": "ssh",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-5dcb06-1",
+          "protocol": "ssh",
+          "src": "198.51.100.26",
+          "time": "2026-07-13T10:06:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-5dcb06-2",
+          "protocol": "ssh",
+          "src": "198.51.100.26",
+          "time": "2026-07-13T10:06:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-5dcb06-3",
+          "protocol": "ssh",
+          "src": "198.51.100.26",
+          "time": "2026-07-13T10:06:03Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-08",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-dddd53-1",
+          "sess-dddd53-2",
+          "sess-dddd53-3"
+        ],
+        "protocol": "telnet",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-dddd53-1",
+          "protocol": "telnet",
+          "src": "198.51.100.27",
+          "time": "2026-07-13T10:07:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-dddd53-2",
+          "protocol": "telnet",
+          "src": "198.51.100.27",
+          "time": "2026-07-13T10:07:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-dddd53-3",
+          "protocol": "telnet",
+          "src": "198.51.100.27",
+          "time": "2026-07-13T10:07:03Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-09",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-e25891-1",
+          "sess-e25891-2",
+          "sess-e25891-3",
+          "sess-e25891-4",
+          "sess-e25891-5",
+          "sess-e25891-6"
+        ],
+        "protocol": "http",
+        "session_count": 2
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-e25891-1",
+          "protocol": "http",
+          "src": "198.51.100.28",
+          "time": "2026-07-13T10:08:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-e25891-2",
+          "protocol": "http",
+          "src": "198.51.100.28",
+          "time": "2026-07-13T10:08:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-e25891-3",
+          "protocol": "http",
+          "src": "198.51.100.28",
+          "time": "2026-07-13T10:08:03Z"
+        },
+        {
+          "action": "connect",
+          "event_id": "sess-e25891-4",
+          "protocol": "http",
+          "src": "198.51.100.28",
+          "time": "2026-07-13T10:08:04Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-e25891-5",
+          "protocol": "http",
+          "src": "198.51.100.28",
+          "time": "2026-07-13T10:08:05Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-e25891-6",
+          "protocol": "http",
+          "src": "198.51.100.28",
+          "time": "2026-07-13T10:08:06Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-10",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-2c2cbf-1",
+          "sess-2c2cbf-2",
+          "sess-2c2cbf-3"
+        ],
+        "protocol": "ssh",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-2c2cbf-1",
+          "protocol": "ssh",
+          "src": "198.51.100.29",
+          "time": "2026-07-13T10:09:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-2c2cbf-2",
+          "protocol": "ssh",
+          "src": "198.51.100.29",
+          "time": "2026-07-13T10:09:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-2c2cbf-3",
+          "protocol": "ssh",
+          "src": "198.51.100.29",
+          "time": "2026-07-13T10:09:03Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-11",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-9bfe50-1",
+          "sess-9bfe50-2",
+          "sess-9bfe50-3"
+        ],
+        "protocol": "telnet",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-9bfe50-1",
+          "protocol": "telnet",
+          "src": "198.51.100.30",
+          "time": "2026-07-13T10:10:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-9bfe50-2",
+          "protocol": "telnet",
+          "src": "198.51.100.30",
+          "time": "2026-07-13T10:10:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-9bfe50-3",
+          "protocol": "telnet",
+          "src": "198.51.100.30",
+          "time": "2026-07-13T10:10:03Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-12",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-743181-1",
+          "sess-743181-2",
+          "sess-743181-3"
+        ],
+        "protocol": "http",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-743181-1",
+          "protocol": "http",
+          "src": "198.51.100.31",
+          "time": "2026-07-13T10:11:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-743181-2",
+          "protocol": "http",
+          "src": "198.51.100.31",
+          "time": "2026-07-13T10:11:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-743181-3",
+          "protocol": "http",
+          "src": "198.51.100.31",
+          "time": "2026-07-13T10:11:03Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-13",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-ce751a-1",
+          "sess-ce751a-2",
+          "sess-ce751a-3",
+          "sess-ce751a-4",
+          "sess-ce751a-5",
+          "sess-ce751a-6"
+        ],
+        "protocol": "ssh",
+        "session_count": 2
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-ce751a-1",
+          "protocol": "ssh",
+          "src": "198.51.100.32",
+          "time": "2026-07-13T10:12:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-ce751a-2",
+          "protocol": "ssh",
+          "src": "198.51.100.32",
+          "time": "2026-07-13T10:12:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-ce751a-3",
+          "protocol": "ssh",
+          "src": "198.51.100.32",
+          "time": "2026-07-13T10:12:03Z"
+        },
+        {
+          "action": "connect",
+          "event_id": "sess-ce751a-4",
+          "protocol": "ssh",
+          "src": "198.51.100.32",
+          "time": "2026-07-13T10:12:04Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-ce751a-5",
+          "protocol": "ssh",
+          "src": "198.51.100.32",
+          "time": "2026-07-13T10:12:05Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-ce751a-6",
+          "protocol": "ssh",
+          "src": "198.51.100.32",
+          "time": "2026-07-13T10:12:06Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-14",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-1212e7-1",
+          "sess-1212e7-2",
+          "sess-1212e7-3"
+        ],
+        "protocol": "telnet",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-1212e7-1",
+          "protocol": "telnet",
+          "src": "198.51.100.33",
+          "time": "2026-07-13T10:13:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-1212e7-2",
+          "protocol": "telnet",
+          "src": "198.51.100.33",
+          "time": "2026-07-13T10:13:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-1212e7-3",
+          "protocol": "telnet",
+          "src": "198.51.100.33",
+          "time": "2026-07-13T10:13:03Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-15",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-7c894f-1",
+          "sess-7c894f-2",
+          "sess-7c894f-3"
+        ],
+        "protocol": "http",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-7c894f-1",
+          "protocol": "http",
+          "src": "198.51.100.34",
+          "time": "2026-07-13T10:14:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-7c894f-2",
+          "protocol": "http",
+          "src": "198.51.100.34",
+          "time": "2026-07-13T10:14:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-7c894f-3",
+          "protocol": "http",
+          "src": "198.51.100.34",
+          "time": "2026-07-13T10:14:03Z"
+        }
+      ]
+    },
+    {
+      "case_id": "P-SESSION-16",
+      "expected": {
+        "ordered_event_ids": [
+          "sess-226c22-1",
+          "sess-226c22-2",
+          "sess-226c22-3"
+        ],
+        "protocol": "ssh",
+        "session_count": 1
+      },
+      "input": [
+        {
+          "action": "connect",
+          "event_id": "sess-226c22-1",
+          "protocol": "ssh",
+          "src": "198.51.100.35",
+          "time": "2026-07-13T10:15:01Z"
+        },
+        {
+          "action": "auth_fail",
+          "event_id": "sess-226c22-2",
+          "protocol": "ssh",
+          "src": "198.51.100.35",
+          "time": "2026-07-13T10:15:02Z"
+        },
+        {
+          "action": "disconnect",
+          "event_id": "sess-226c22-3",
+          "protocol": "ssh",
+          "src": "198.51.100.35",
+          "time": "2026-07-13T10:15:03Z"
+        }
+      ]
+    }
+  ],
+  "interface_version": "2026-07",
+  "project": "SOC-A2",
+  "schema_version": "1.0"
+}

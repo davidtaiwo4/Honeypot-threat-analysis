@@ -1,0 +1,42 @@
+[
+  {
+    "payload_sha256": "1c4d805ac897295e2b8ddd48ff43ed4175303c3c6a6e127620e23d61b003052b",
+    "occurrence_count": 73,
+    "distinct_source_ips": 3,
+    "source_ips": "198.51.100.155;198.51.100.160;198.51.100.87",
+    "distinct_bytes_values_seen": 72,
+    "bytes_field_reliable": false,
+    "first_sensor_time": "2026-07-01T00:21:11Z",
+    "last_sensor_time": "2026-07-03T03:41:47Z"
+  },
+  {
+    "payload_sha256": "6cac3bae3e6b9c949bfc114ff6d127cf141eefe4e8f544ce5261c5ef355008c8",
+    "occurrence_count": 74,
+    "distinct_source_ips": 3,
+    "source_ips": "198.51.100.155;198.51.100.160;198.51.100.87",
+    "distinct_bytes_values_seen": 73,
+    "bytes_field_reliable": false,
+    "first_sensor_time": "2026-07-01T00:42:17Z",
+    "last_sensor_time": "2026-07-03T04:02:53Z"
+  },
+  {
+    "payload_sha256": "b11228a90c9cff6264d51b34c1bd9427175f258b04268926cccc709a3466647a",
+    "occurrence_count": 73,
+    "distinct_source_ips": 3,
+    "source_ips": "198.51.100.155;198.51.100.160;198.51.100.87",
+    "distinct_bytes_values_seen": 73,
+    "bytes_field_reliable": false,
+    "first_sensor_time": "2026-07-01T00:31:44Z",
+    "last_sensor_time": "2026-07-03T03:52:20Z"
+  },
+  {
+    "payload_sha256": "e1c27bf70abbabeb9ee71bffa8f9737b70361802170cbe39c11bbdc42875263f",
+    "occurrence_count": 73,
+    "distinct_source_ips": 3,
+    "source_ips": "198.51.100.155;198.51.100.160;198.51.100.87",
+    "distinct_bytes_values_seen": 72,
+    "bytes_field_reliable": false,
+    "first_sensor_time": "2026-07-01T00:10:38Z",
+    "last_sensor_time": "2026-07-03T03:31:14Z"
+  }
+]

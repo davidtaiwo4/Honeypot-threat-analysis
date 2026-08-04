@@ -1,0 +1,169 @@
+{
+  "type": "bundle",
+  "id": "bundle--46e275fc-e21a-5440-a122-fec898f9d3d6",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--e6f1a2c5-e64b-5734-9340-dbff1cd06e8b",
+      "created": "2026-07-03T04:02:53Z",
+      "modified": "2026-07-03T04:02:53Z",
+      "name": "soc-stage6-analysis-pipeline",
+      "identity_class": "system",
+      "description": "Automated honeypot analysis pipeline, evidence marker UBI-A6-SHARED-B1"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--947332c8-1423-5476-acd9-7628fcc2a8a1",
+      "created": "2026-07-03T04:02:53Z",
+      "modified": "2026-07-03T04:02:53Z",
+      "created_by_ref": "identity--e6f1a2c5-e64b-5734-9340-dbff1cd06e8b",
+      "name": "Payload hash observed in honeypot capture: 1c4d805ac897295e...",
+      "description": "Observed 73 times across 3 source IP(s) (198.51.100.155;198.51.100.160;198.51.100.87). bytes field unreliable for this hash -- do not treat as payload size (see hash-ledger.csv note).",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '1c4d805ac897295e2b8ddd48ff43ed4175303c3c6a6e127620e23d61b003052b']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-07-01T00:21:11Z",
+      "confidence": 85
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fdf83e9e-96f8-546b-91e9-d97e672e2eac",
+      "created": "2026-07-03T04:02:53Z",
+      "modified": "2026-07-03T04:02:53Z",
+      "created_by_ref": "identity--e6f1a2c5-e64b-5734-9340-dbff1cd06e8b",
+      "name": "Payload hash observed in honeypot capture: 6cac3bae3e6b9c94...",
+      "description": "Observed 74 times across 3 source IP(s) (198.51.100.155;198.51.100.160;198.51.100.87). bytes field unreliable for this hash -- do not treat as payload size (see hash-ledger.csv note).",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = '6cac3bae3e6b9c949bfc114ff6d127cf141eefe4e8f544ce5261c5ef355008c8']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-07-01T00:42:17Z",
+      "confidence": 85
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7e382a90-d7ec-55f0-9f8b-2ee24f472d2d",
+      "created": "2026-07-03T04:02:53Z",
+      "modified": "2026-07-03T04:02:53Z",
+      "created_by_ref": "identity--e6f1a2c5-e64b-5734-9340-dbff1cd06e8b",
+      "name": "Payload hash observed in honeypot capture: b11228a90c9cff62...",
+      "description": "Observed 73 times across 3 source IP(s) (198.51.100.155;198.51.100.160;198.51.100.87). bytes field unreliable for this hash -- do not treat as payload size (see hash-ledger.csv note).",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'b11228a90c9cff6264d51b34c1bd9427175f258b04268926cccc709a3466647a']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-07-01T00:31:44Z",
+      "confidence": 85
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--63c0bfb3-9016-59fe-962c-d66e771721a2",
+      "created": "2026-07-03T04:02:53Z",
+      "modified": "2026-07-03T04:02:53Z",
+      "created_by_ref": "identity--e6f1a2c5-e64b-5734-9340-dbff1cd06e8b",
+      "name": "Payload hash observed in honeypot capture: e1c27bf70abbabeb...",
+      "description": "Observed 73 times across 3 source IP(s) (198.51.100.155;198.51.100.160;198.51.100.87). bytes field unreliable for this hash -- do not treat as payload size (see hash-ledger.csv note).",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'SHA-256' = 'e1c27bf70abbabeb9ee71bffa8f9737b70361802170cbe39c11bbdc42875263f']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-07-01T00:10:38Z",
+      "confidence": 85
+    },
+    {
+      "type": "infrastructure",
+      "spec_version": "2.1",
+      "id": "infrastructure--04e9e1f9-c91f-5fa2-b9f2-0051b6848d49",
+      "created": "2026-07-03T04:02:53Z",
+      "modified": "2026-07-03T04:02:53Z",
+      "created_by_ref": "identity--e6f1a2c5-e64b-5734-9340-dbff1cd06e8b",
+      "name": "Honeypot campaign infrastructure: CLUSTER-001",
+      "description": "3 source IP(s) share identical payload hash set (4 hashes) -- direct evidence of shared distribution infrastructure, not inferred from reputation.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "x_source_ips": [
+        "198.51.100.155",
+        "198.51.100.160",
+        "198.51.100.87"
+      ],
+      "x_session_count": 293,
+      "x_confidence_rationale": "3 source IP(s) share identical payload hash set (4 hashes) -- direct evidence of shared distribution infrastructure, not inferred from reputation."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b4a4a387-b970-5508-98ba-d028b2da5a12",
+      "created": "2026-07-03T04:02:53Z",
+      "modified": "2026-07-03T04:02:53Z",
+      "created_by_ref": "identity--e6f1a2c5-e64b-5734-9340-dbff1cd06e8b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--947332c8-1423-5476-acd9-7628fcc2a8a1",
+      "target_ref": "infrastructure--04e9e1f9-c91f-5fa2-b9f2-0051b6848d49",
+      "description": "Hash 1c4d805ac897295e... delivered via infrastructure in CLUSTER-001 (3 IPs, 293 sessions)."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fd0b0cb7-d563-5b5b-b307-6aeec3cdfd99",
+      "created": "2026-07-03T04:02:53Z",
+      "modified": "2026-07-03T04:02:53Z",
+      "created_by_ref": "identity--e6f1a2c5-e64b-5734-9340-dbff1cd06e8b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--fdf83e9e-96f8-546b-91e9-d97e672e2eac",
+      "target_ref": "infrastructure--04e9e1f9-c91f-5fa2-b9f2-0051b6848d49",
+      "description": "Hash 6cac3bae3e6b9c94... delivered via infrastructure in CLUSTER-001 (3 IPs, 293 sessions)."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--28dbfc1b-2846-5429-b2d8-52fb2d6025d1",
+      "created": "2026-07-03T04:02:53Z",
+      "modified": "2026-07-03T04:02:53Z",
+      "created_by_ref": "identity--e6f1a2c5-e64b-5734-9340-dbff1cd06e8b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--7e382a90-d7ec-55f0-9f8b-2ee24f472d2d",
+      "target_ref": "infrastructure--04e9e1f9-c91f-5fa2-b9f2-0051b6848d49",
+      "description": "Hash b11228a90c9cff62... delivered via infrastructure in CLUSTER-001 (3 IPs, 293 sessions)."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e9a873fd-5526-518a-a5a9-b5ae4eb06ea6",
+      "created": "2026-07-03T04:02:53Z",
+      "modified": "2026-07-03T04:02:53Z",
+      "created_by_ref": "identity--e6f1a2c5-e64b-5734-9340-dbff1cd06e8b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--63c0bfb3-9016-59fe-962c-d66e771721a2",
+      "target_ref": "infrastructure--04e9e1f9-c91f-5fa2-b9f2-0051b6848d49",
+      "description": "Hash e1c27bf70abbabeb... delivered via infrastructure in CLUSTER-001 (3 IPs, 293 sessions)."
+    },
+    {
+      "type": "note",
+      "spec_version": "2.1",
+      "id": "note--32e483fd-09e2-5f16-88be-bc397afd936d",
+      "created": "2026-07-03T04:02:53Z",
+      "modified": "2026-07-03T04:02:53Z",
+      "created_by_ref": "identity--e6f1a2c5-e64b-5734-9340-dbff1cd06e8b",
+      "object_refs": [
+        "infrastructure--04e9e1f9-c91f-5fa2-b9f2-0051b6848d49"
+      ],
+      "abstract": "Evidence marker + command-level session locator",
+      "content": "Command-level evidence: event_id=S-ed7d82-0000211-4, session_id=S-ed7d82-0000211-r0, command='uname -a && id', evidence_marker=UBI-A6-SHARED-B1. Raw locator preserved in honeypot-replay.jsonl and hash-ledger.csv for reproduction."
+    }
+  ]
+}

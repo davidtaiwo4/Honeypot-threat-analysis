@@ -1,0 +1,55 @@
+---
+- name: Prepare isolated T-Pot sensor boundary
+  hosts: sensor
+  become: true
+  vars:
+    management_port: 64297
+  tasks:
+    - name: Require explicit boundary variables
+      ansible.builtin.assert:
+        that:
+          - management_cidr is defined
+          - artifact_sink_ip is defined
+          - tpot_ref is defined
+        fail_msg: Set management_cidr, artifact_sink_ip, and tpot_ref in private inventory.
+
+    - name: Install boundary dependencies
+      ansible.builtin.apt:
+        name: [nftables, curl, jq, git, ca-certificates]
+        state: present
+        update_cache: true
+
+    - name: Render fail-closed nftables policy
+      ansible.builtin.template:
+        src: nftables.conf.j2
+        dest: /etc/nftables.conf
+        owner: root
+        group: root
+        mode: "0600"
+      notify: Reload nftables
+
+    - name: Enable nftables at boot
+      ansible.builtin.systemd:
+        name: nftables
+        enabled: true
+
+    - name: Checkout the pinned official installer as the non-root operator
+      become_user: "{{ ansible_user }}"
+      ansible.builtin.git:
+        repo: https://github.com/telekom-security/tpotce.git
+        dest: "{{ ansible_user }}/tpotce"
+        version: "{{ tpot_ref }}"
+        update: false
+
+    - name: Install evidence capture command
+      ansible.builtin.copy:
+        src: capture-state.sh
+        dest: /usr/local/sbin/netforge-tpot-capture
+        owner: root
+        group: root
+        mode: "0750"
+
+  handlers:
+    - name: Reload nftables
+      ansible.builtin.command: nft -f /etc/nftables.conf
+      changed_when: true

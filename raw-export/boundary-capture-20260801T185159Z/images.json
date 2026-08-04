@@ -1,0 +1,1722 @@
+[
+    {
+        "Id": "sha256:8716acad1abb9fc09f9ad611ab02a28023fb59632e2543e1546bbdaa0a86c75b",
+        "RepoTags": [
+            "ghcr.io/telekom-security/logstash:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/logstash@sha256:8716acad1abb9fc09f9ad611ab02a28023fb59632e2543e1546bbdaa0a86c75b"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-20T03:38:57.239826434Z",
+        "Config": {
+            "User": "logstash:logstash",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive",
+                "LS_VER=9.3.5"
+            ],
+            "Cmd": [
+                "entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "logstash",
+                "com.docker.compose.version": "5.1.3",
+                "org.opencontainers.image.version": "24.04"
+            },
+            "ArgsEscaped": true,
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "curl -s -XGET 'http://127.0.0.1:9600'"
+                ],
+                "Retries": 10
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 554832897,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:98effb2dfe85d4c431f97d90482075f19e5fc3a57c2dd423d8bdfd4813620043",
+                "sha256:c246b80f3399286bf5e66865e7f8078c98e0bb9c35289d45c94189cda9d25cf3",
+                "sha256:f073383ad1535284ce6b1abef40acb4f66626e3346d71936af1c93ced09e4e08"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.186483778Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:8716acad1abb9fc09f9ad611ab02a28023fb59632e2543e1546bbdaa0a86c75b",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/logstash"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:21911ba03b82d2546a26e003a86a4a90f01ab9f4dc1c15d6c3efe5199c2742a1",
+        "RepoTags": [
+            "ghcr.io/telekom-security/wordpot:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/wordpot@sha256:21911ba03b82d2546a26e003a86a4a90f01ab9f4dc1c15d6c3efe5199c2742a1"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-19T14:40:37.537783015Z",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "./wordpot",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "80",
+                "--title",
+                "Wordpress"
+            ],
+            "WorkingDir": "/opt/wordpot/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "wordpot",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 16285239,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:fdbd82e9b17479d4324fe2489a652a5c9a3eb68e8f7cc157b1230a114b1ee0e5",
+                "sha256:c90dc46b04486c9e013f87f4dbaabbfd0d805fd56e61d0cd48c80bd64bb6de98",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:43.544760023Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:21911ba03b82d2546a26e003a86a4a90f01ab9f4dc1c15d6c3efe5199c2742a1",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/wordpot"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:eb971d4f208e99726cd0f5b00fc3500bc8e1e7a37c2929b84da544ed8ae5ee55",
+        "RepoTags": [
+            "ghcr.io/telekom-security/tanner:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/tanner@sha256:eb971d4f208e99726cd0f5b00fc3500bc8e1e7a37c2929b84da544ed8ae5ee55"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-19T13:11:08.895545681Z",
+        "Config": {
+            "User": "tanner:tanner",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "tanner"
+            ],
+            "WorkingDir": "/opt/tanner",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "tanner",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGKILL",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 101708405,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:aaeae92307e7e3725f2b6676b76113a21e1c95b32628935b2924ac42e5a83568",
+                "sha256:03e32e5dcbecac7be1e9dd4927b91428b4b0469a8eea30febab3f40eefaccaa6",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.280322589Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:eb971d4f208e99726cd0f5b00fc3500bc8e1e7a37c2929b84da544ed8ae5ee55",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/tanner"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:ba11d1b05e856602508c0fc8b197aa792f2f865c2f08740c49e843e1516e5894",
+        "RepoTags": [
+            "ghcr.io/telekom-security/phpox:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/phpox@sha256:ba11d1b05e856602508c0fc8b197aa792f2f865c2f08740c49e843e1516e5894"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-19T13:10:51.406108434Z",
+        "Config": {
+            "User": "nobody:nobody",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "python3",
+                "sandbox.py"
+            ],
+            "WorkingDir": "/opt/phpox",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "phpox",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGKILL",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 30417217,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:607578f5e9279743046e56062c88aff52b65d507e8591deeb94842f727a493ca",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.102918197Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:ba11d1b05e856602508c0fc8b197aa792f2f865c2f08740c49e843e1516e5894",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/phpox"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:826f7a077b2e9cfa8647b21c4f6adc0bc47ecba2799dd88eb698104416268611",
+        "RepoTags": [
+            "ghcr.io/telekom-security/snare:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/snare@sha256:826f7a077b2e9cfa8647b21c4f6adc0bc47ecba2799dd88eb698104416268611"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-19T13:10:51.186163785Z",
+        "Config": {
+            "User": "snare:snare",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "sh",
+                "-c",
+                "exec snare --tanner tanner --debug true --auto-update false --host-ip 0.0.0.0 --port 80 --page-dir $(shuf -i 1-10 -n 1)"
+            ],
+            "WorkingDir": "/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "snare",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGKILL",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 50725205,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:08e86730c7676f655af63dab614d5ec7198f4baf25cead85d88456ece73d551a",
+                "sha256:92368b01a5a2e050182fb6e2f33be445e970249b22afa4267aec04ab1a92e15d"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.189671754Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:826f7a077b2e9cfa8647b21c4f6adc0bc47ecba2799dd88eb698104416268611",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/snare"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:a87a16f9659809752ae2bc50cd46626eb552ab126cf61e4bee9fb5ca44bf3ce2",
+        "RepoTags": [
+            "ghcr.io/telekom-security/suricata:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/suricata@sha256:a87a16f9659809752ae2bc50cd46626eb552ab126cf61e4bee9fb5ca44bf3ce2"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-19T11:53:56.516964935Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "entrypoint.sh"
+            ],
+            "WorkingDir": "/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "suricata",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 42362239,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:34884abbe92863fce933ed7c39c0e045631af0ed86d5cc0dfbdf9fdca426ce3c",
+                "sha256:81625f3278403bfb6f38528f65848ad52cd4329631b15dfbbe3521d91fa1dcda",
+                "sha256:025e0436598f5d2eb9285373231d5952b13ad009dec6dfe10ccfe25b25f6bbb5"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:44.589561258Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:a87a16f9659809752ae2bc50cd46626eb552ab126cf61e4bee9fb5ca44bf3ce2",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/suricata"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:2d08936c9bfa7313a6bc5e7f5bd11214116cdd3a0b7bbe9ce4395cf6fc406d2b",
+        "RepoTags": [
+            "ghcr.io/telekom-security/sentrypeer:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/sentrypeer@sha256:2d08936c9bfa7313a6bc5e7f5bd11214116cdd3a0b7bbe9ce4395cf6fc406d2b"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-18T08:23:54.201048829Z",
+        "Config": {
+            "User": "sentrypeer:sentrypeer",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/usr/bin/sentrypeer",
+                "-jar",
+                "-f",
+                "/var/log/sentrypeer/sentrypeer.db",
+                "-l",
+                "/var/log/sentrypeer/sentrypeer.json"
+            ],
+            "WorkingDir": "/var/log/sentrypeer/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "sentrypeer",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGKILL",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 16061138,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:8aa2272762a48ef46db65bcc10c3cc8f9589cb5ae2311c4ca1e512bfd24ef95a",
+                "sha256:afab295dc89c8c2bf53cb0d6e3a0655869519fc7b0c7facae11a4e34e245b208",
+                "sha256:d853e1fbab72f8354ee67c215a6bda473858b0691f5fbdf57a0761b6a45412c0",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.237184471Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:2d08936c9bfa7313a6bc5e7f5bd11214116cdd3a0b7bbe9ce4395cf6fc406d2b",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/sentrypeer"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:da8e9c1a9e3478216e18a310f52e5453a992f211924f6d66560bae93ee5866c7",
+        "RepoTags": [
+            "ghcr.io/telekom-security/redishoneypot:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/redishoneypot@sha256:da8e9c1a9e3478216e18a310f52e5453a992f211924f6d66560bae93ee5866c7"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-17T13:53:09.308158448Z",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "sh",
+                "-c",
+                "./RedisHoneyPot > /var/log/redishoneypot/redishoneypot.log 2>&1"
+            ],
+            "WorkingDir": "/opt/redishoneypot",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "redishoneypot",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 6562145,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:70cd27a59c91dfcceb47ba31e14b6f4a0b7f6f1aa9b11272ccfa2e1d78c64177",
+                "sha256:98a21f794fccb5bfa6b41e459bb8369ced2411e649e26b88368b622d1cfa14b0",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.3390319Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:da8e9c1a9e3478216e18a310f52e5453a992f211924f6d66560bae93ee5866c7",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/redishoneypot"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:057b2bb715fbfb9173b5a04574173cca38a15cea3a193e95a72057b86faa21cb",
+        "RepoTags": [
+            "ghcr.io/telekom-security/p0f:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/p0f@sha256:057b2bb715fbfb9173b5a04574173cca38a15cea3a193e95a72057b86faa21cb"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-17T13:34:56.119509233Z",
+        "Config": {
+            "User": "p0f:p0f",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/bash",
+                "-c",
+                "exec /opt/p0f/p0f -u p0f -j -o /var/log/p0f/p0f.json -i $(ip route | grep \"^default\" | awk '{ print $5 }') > /dev/null"
+            ],
+            "WorkingDir": "/opt/p0f",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "p0f",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 7686350,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:1a910c572b572f5cefca3acd5c2d56293634f484d39750921346e569176a9423",
+                "sha256:ba1669877b04f07a79ddce523ac641b122531f9d1c64d042472826c7139283c9",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.070865131Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:057b2bb715fbfb9173b5a04574173cca38a15cea3a193e95a72057b86faa21cb",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/p0f"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:ba65bdaf35fdb6b5f0d23e506baea28ea5f98c5a2c13f540511bbd63127e738c",
+        "RepoTags": [
+            "ghcr.io/telekom-security/miniprint:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/miniprint@sha256:ba65bdaf35fdb6b5f0d23e506baea28ea5f98c5a2c13f540511bbd63127e738c"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-17T11:10:06.278577973Z",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "./server",
+                "--bind",
+                "0.0.0.0",
+                "--log-file",
+                "/opt/miniprint/log/miniprint.json"
+            ],
+            "WorkingDir": "/opt/miniprint/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "miniprint",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 13833023,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:fdbd82e9b17479d4324fe2489a652a5c9a3eb68e8f7cc157b1230a114b1ee0e5",
+                "sha256:519c45b03aedecfaf32bb2637d1570452b40b55451542b3d6fd3d0e7f82f2c34",
+                "sha256:5888e7aea01be1853f0a0f3e70bd2e1a2a4e09e36e612f082bf055057afac4bf",
+                "sha256:d9db8e43ca9762977d1bbb547e4d79edf47053604a423486c33d7013fcb3a884",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.346371676Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:ba65bdaf35fdb6b5f0d23e506baea28ea5f98c5a2c13f540511bbd63127e738c",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/miniprint"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:f580fb683016bde2299b7602cf811091878b22bfa8a615c2b938153ea235bcb4",
+        "RepoTags": [
+            "ghcr.io/telekom-security/medpot:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/medpot@sha256:f580fb683016bde2299b7602cf811091878b22bfa8a615c2b938153ea235bcb4"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-17T11:02:33.395968277Z",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "./medpot"
+            ],
+            "WorkingDir": "/opt/medpot",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "medpot",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 5665394,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:21aeed66e3245bf2b2c65cf794c285fdb0a87eeb90f2fe1931a93c29a6ad4e91",
+                "sha256:55288223de7198ced6174444b4cbabcfeac21cb4f8fa9317c34c20299947f53d",
+                "sha256:d1756a9e7a6d9e974cd4f7ed9b9261ed643f7a1d9e9d258ab5f2d21793d6c2b7",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.314661474Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:f580fb683016bde2299b7602cf811091878b22bfa8a615c2b938153ea235bcb4",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/medpot"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:db026b5d310b7a2c6fd323c8bb07cff0ce0be2ff0666f899f35dcbafb955aa00",
+        "RepoTags": [
+            "ghcr.io/telekom-security/mailoney:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/mailoney@sha256:db026b5d310b7a2c6fd323c8bb07cff0ce0be2ff0666f899f35dcbafb955aa00"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-15T17:16:59.657754669Z",
+        "Config": {
+            "User": "mailoney:mailoney",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/usr/bin/python3",
+                "mailoney.py",
+                "-i",
+                "0.0.0.0",
+                "-p",
+                "25",
+                "-t",
+                "schizo_open_relay"
+            ],
+            "WorkingDir": "/opt/mailoney/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "mailoney",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 21581530,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:e4d54e3571704e672e47925efa56adb4f726dcc89199aceed7fff84408b6470b",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:44.939292042Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:db026b5d310b7a2c6fd323c8bb07cff0ce0be2ff0666f899f35dcbafb955aa00",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/mailoney"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:11af7462bc245d3d3c49a98a8a5b6806bd1016e6497ddd48c862848490dd49fa",
+        "RepoTags": [
+            "ghcr.io/telekom-security/h0neytr4p:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/h0neytr4p@sha256:11af7462bc245d3d3c49a98a8a5b6806bd1016e6497ddd48c862848490dd49fa"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-12T11:54:39.150979241Z",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "./h0neytr4p"
+            ],
+            "Cmd": [
+                "-cert=app.crt",
+                "-key=app.key",
+                "-log=log/log.json",
+                "-catchall=false",
+                "-payload=/data/h0neytr4p/payloads/",
+                "-wildcard=true",
+                "-traps=traps/"
+            ],
+            "WorkingDir": "/opt/h0neytr4p",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "h0neytr4p",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 5388637,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:a39e159f9ed443d3d6266663ab3d6bb24f3dc0ed962b7a67940e86f06a46afd1",
+                "sha256:b698c12ed8030bb23ba3a1ab53093bb2dcc36dfc1cecb1720d50bbe1eae6984e",
+                "sha256:be97599f9abd5af91b6c644d8f59c30eaf3ba9a1018f5ee265488ce5016437ef",
+                "sha256:7f405147fdfd17555f1cc20bafef1235aa7bc8ff8f881ce14c5b6ff895c428a8",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.332169271Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:11af7462bc245d3d3c49a98a8a5b6806bd1016e6497ddd48c862848490dd49fa",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/h0neytr4p"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:d5df99b616650817df3e155d64856d40d95d58783c8b30e3a2678947113f1892",
+        "RepoTags": [
+            "ghcr.io/telekom-security/ipphoney:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/ipphoney@sha256:d5df99b616650817df3e155d64856d40d95d58783c8b30e3a2678947113f1892"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-11T18:19:32.783818494Z",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "./honeypot"
+            ],
+            "WorkingDir": "/opt/ipphoney/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "ipphoney",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 18712090,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:fdbd82e9b17479d4324fe2489a652a5c9a3eb68e8f7cc157b1230a114b1ee0e5",
+                "sha256:288de956474946d11f93f918102896b1e2b0a3171f8ae79e820f145fef9d284c",
+                "sha256:7799d0ba638310bde47ad723b324aaf088ce353271be7a4a7223671a623d33f5",
+                "sha256:b178ec7d4a8fea0bf778aa7f34fc802746f8864b005b23be52c18bd999c5d64c",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.405749359Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:d5df99b616650817df3e155d64856d40d95d58783c8b30e3a2678947113f1892",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/ipphoney"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:99a187ec398acdf65ba91b6f7088eb1de83d6edcc615972e70613c34826c0406",
+        "RepoTags": [
+            "ghcr.io/telekom-security/honeytrap:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/honeytrap@sha256:99a187ec398acdf65ba91b6f7088eb1de83d6edcc615972e70613c34826c0406"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-11T17:39:19.954544707Z",
+        "Config": {
+            "User": "honeytrap:honeytrap",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive"
+            ],
+            "Cmd": [
+                "/opt/honeytrap/sbin/honeytrap",
+                "-D",
+                "-C",
+                "/opt/honeytrap/etc/honeytrap/honeytrap.conf",
+                "-P",
+                "/tmp/honeytrap/honeytrap.pid",
+                "-t",
+                "5",
+                "-u",
+                "honeytrap",
+                "-g",
+                "honeytrap"
+            ],
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "honeytrap",
+                "com.docker.compose.version": "5.1.3",
+                "org.opencontainers.image.version": "22.04"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 106538405,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:8bba68e7621928237aa6d6e2c680cb9572c942ee23c2adabd22016bb67cb938d",
+                "sha256:d3a4d55345a4edd5adf4123361f13cd21f32795a8f7c407f46b18a009e1aecda",
+                "sha256:7dc561f4cab9cdd84787bb11c5992de477b98fcd136e5e87baa4477b09ca9a0a"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.221160586Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:99a187ec398acdf65ba91b6f7088eb1de83d6edcc615972e70613c34826c0406",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/honeytrap"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:92d28d2e050f44e97844f8e06a9827230048a9ec724258bbc1df89f42f011998",
+        "RepoTags": [
+            "ghcr.io/telekom-security/honeyaml:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/honeyaml@sha256:92d28d2e050f44e97844f8e06a9827230048a9ec724258bbc1df89f42f011998"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-10T16:05:34.861492802Z",
+        "Author": "github.com/chainguard-dev/apko",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin",
+                "SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt"
+            ],
+            "Cmd": [
+                "./honeyaml",
+                "-d",
+                "/opt/honeyaml/log"
+            ],
+            "WorkingDir": "/opt/honeyaml",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "honeyaml",
+                "com.docker.compose.version": "5.1.3",
+                "dev.chainguard.image.title": "wolfi-base",
+                "dev.chainguard.package.main": "",
+                "org.opencontainers.image.authors": "Chainguard Team https://www.chainguard.dev/",
+                "org.opencontainers.image.created": "2026-06-10T01:15:43Z",
+                "org.opencontainers.image.source": "https://github.com/chainguard-images/images/tree/main/images/wolfi-base",
+                "org.opencontainers.image.title": "wolfi-base",
+                "org.opencontainers.image.url": "https://images.chainguard.dev/directory/image/wolfi-base/overview",
+                "org.opencontainers.image.vendor": "Chainguard"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 9972077,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:0d32f70c1e948472d2ad710667c37668bee42db8f81c497bfd990d80b26e0a4b",
+                "sha256:469fc7229c4df05f818b17c0116a45104c2597d1d9ceac238d2f8fae25cd55fb",
+                "sha256:a0d43a99ff318f4a7230d00fc85f9392d174b8ca72fb53c476d83b14f829eec7",
+                "sha256:d6ff2aff84f1f144edba87dacfaac9f62afac2ddd9a8329da89e4160df129a58",
+                "sha256:caaccf89b8660b925e0e0266ffdc4f3e3cc7e98e121742c233f199ec167a4920",
+                "sha256:c51a24e0862e0dc59177b34a1637ae3431b818fc70200dd1485e1cac36b72f0f",
+                "sha256:66489d33a006a37280ac85a93e9f39a23f9e76dff2ea53fe43f341c011add9ea",
+                "sha256:90cfe0bd8cd693b2ee91b94108fc47f023d82edc00e57352ab6635d827b33505",
+                "sha256:852a2b9325825ed672cd62abd93cdb8d84ab7b20e881280df38d77ba07531fa3",
+                "sha256:b8195249dcd92d2c0519946f0a9f9d9ec7b88e9a19b5f83bc156103a39d5ab50",
+                "sha256:b1bc89b14bf9f298b2e602e3261a33e7f6d25c376d4d2d17b4799fab3950b7ab",
+                "sha256:e72ddea1fe983de1a74ac6bb9b03dbccf14149b4ca2305fbe3b993fac4fa25b6",
+                "sha256:4193c4a8f451695b4de90fc72f9290627c2cda49c1a65d9d33567e18604fd485",
+                "sha256:ee0054904348c317d96c358ee38c55d0ca54dd561bb06b87210d2913fcf48495",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.638500912Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:92d28d2e050f44e97844f8e06a9827230048a9ec724258bbc1df89f42f011998",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/honeyaml"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:a4e05fa631f035e4c9ad7756c5aa985319dc7ccbdfbaa17459425c533e609b33",
+        "RepoTags": [
+            "ghcr.io/telekom-security/heralding:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/heralding@sha256:a4e05fa631f035e4c9ad7756c5aa985319dc7ccbdfbaa17459425c533e609b33"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-10T10:03:01.841256543Z",
+        "Config": {
+            "User": "heralding:heralding",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "heralding",
+                "-c",
+                "/etc/heralding/heralding.yml",
+                "-l",
+                "/var/log/heralding/heralding.log"
+            ],
+            "WorkingDir": "/tmp/heralding/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "heralding",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 44752843,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:746a42fdbb8f4757b3308c80692135d236c8450c5cde7571029bb56911153794",
+                "sha256:9755e9a1669d175fbae35829b72c894f70782b37640d292b12b2e42988980ac4",
+                "sha256:9c000bb1da78aa51c083a29f6aecbdab2e0f9b87ec36ba6c012a041a763887c4"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.235094069Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:a4e05fa631f035e4c9ad7756c5aa985319dc7ccbdfbaa17459425c533e609b33",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/heralding"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:45ea38a8c893d40922f2a4e969cc618213216e685f059a0c24cba7c983aa6345",
+        "RepoTags": [
+            "ghcr.io/telekom-security/redis:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/redis@sha256:45ea38a8c893d40922f2a4e969cc618213216e685f059a0c24cba7c983aa6345"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-05T12:10:15.463428626Z",
+        "Config": {
+            "User": "redis:redis",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "redis-server",
+                "/etc/redis.conf"
+            ],
+            "WorkingDir": "/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "redis",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGKILL",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 6796661,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:807f3b5ffa6afa04f0254247ee8b9b5c9d24e3c2e8740f0c29193d72c086bca4",
+                "sha256:168789f84060b0b97a43ffbf1a326e2e2c9ce972f6d541b4d34e222138e308ed"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.041035517Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:45ea38a8c893d40922f2a4e969cc618213216e685f059a0c24cba7c983aa6345",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/redis"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:fd64261b2f7c03c101cec85304159fe0fa290f82431c0ba4b6d8802fcb48a6b1",
+        "RepoTags": [
+            "ghcr.io/telekom-security/fatt:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/fatt@sha256:fd64261b2f7c03c101cec85304159fe0fa290f82431c0ba4b6d8802fcb48a6b1"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-03T14:53:34.18582128Z",
+        "Config": {
+            "User": "fatt:fatt",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "PYTHONPATH=/opt/fatt"
+            ],
+            "Cmd": [
+                "sh",
+                "-c",
+                "exec python3 fatt.py -i $(ip route | grep \"^default\" | awk '{ print $5 }') --print_output --json_logging -o log/fatt.log"
+            ],
+            "WorkingDir": "/opt/fatt",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "fatt",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 67187374,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:28ff51864dc77eb1fb146de22378afb352546056a3d0ab666d56586ada3d058d",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:43.716593652Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:fd64261b2f7c03c101cec85304159fe0fa290f82431c0ba4b6d8802fcb48a6b1",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/fatt"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:f9342d16fea9679ee69c48ae0c4f2373feb3aa9d0176d2a596305282e00599c7",
+        "RepoTags": [
+            "ghcr.io/telekom-security/dionaea:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/dionaea@sha256:f9342d16fea9679ee69c48ae0c4f2373feb3aa9d0176d2a596305282e00599c7"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-02T15:39:12.895829724Z",
+        "Config": {
+            "User": "dionaea:dionaea",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive"
+            ],
+            "Cmd": [
+                "/opt/dionaea/sbin/dionaea",
+                "-u",
+                "dionaea",
+                "-g",
+                "dionaea",
+                "-c",
+                "/opt/dionaea/etc/dionaea/dionaea.cfg"
+            ],
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "dionaea",
+                "com.docker.compose.version": "5.1.3",
+                "org.opencontainers.image.version": "24.04"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true,
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "python3 /cpu_check.py $(pgrep -of dionaea) 99"
+                ],
+                "Interval": 300000000000,
+                "Timeout": 30000000000,
+                "Retries": 3
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 73296277,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:98effb2dfe85d4c431f97d90482075f19e5fc3a57c2dd423d8bdfd4813620043",
+                "sha256:a5265a75a02996dc3f8132143961ef0d980de5c640b0839d0e47643e3bfe2b7e",
+                "sha256:3459856bb230d17f4dc38f3a61d12b809db2518ceac79a25bfb68b4b7bacdc97"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:43.709282547Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:f9342d16fea9679ee69c48ae0c4f2373feb3aa9d0176d2a596305282e00599c7",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/dionaea"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:5e147ad9ca97f9355894f085794d50aacae26cd35f04b52da1ab95585b649ed6",
+        "RepoTags": [
+            "ghcr.io/telekom-security/elasticpot:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/elasticpot@sha256:5e147ad9ca97f9355894f085794d50aacae26cd35f04b52da1ab95585b649ed6"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-02T15:38:00.292607218Z",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "./elasticpot"
+            ],
+            "WorkingDir": "/opt/elasticpot/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "elasticpot",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 17868173,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:fdbd82e9b17479d4324fe2489a652a5c9a3eb68e8f7cc157b1230a114b1ee0e5",
+                "sha256:72d229683027dd469da643966b4c81da65eca3efbed6821942838f75795020d0",
+                "sha256:c1083730311283d7e4b2a4bb6e9a9b4f0087d52c49686b14a5d553794eb9bb81",
+                "sha256:8c8533cbb2228dc1d91c9ab0193be7caf386bd6eea9df4d40a71bb408db26ae0",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.381336569Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:5e147ad9ca97f9355894f085794d50aacae26cd35f04b52da1ab95585b649ed6",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/elasticpot"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:45ed46728977e9a3b78d235cc31049b050c0a911ccb6884f9f5a6d790c6e06ad",
+        "RepoTags": [
+            "ghcr.io/telekom-security/cowrie:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/cowrie@sha256:45ed46728977e9a3b78d235cc31049b050c0a911ccb6884f9f5a6d790c6e06ad"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-02T15:37:43.219962425Z",
+        "Config": {
+            "User": "cowrie:cowrie",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "COWRIE_COMMIT=e74275223dbae611344e820364dad0d73338bb90",
+                "PYTHONPATH=/home/cowrie/cowrie:/home/cowrie/cowrie/src"
+            ],
+            "Cmd": [
+                "/usr/local/bin/start-cowrie-persona"
+            ],
+            "WorkingDir": "/home/cowrie/cowrie",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "cowrie",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 49892925,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:63167ee2a845d449bccaaf976bd5bac54f28ccd91718579a37b6c3e67fb92494",
+                "sha256:fc38f33b7efec614369d1d4918662aeba562b38823a0daa9f8a8ffcb3dfaf772",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.274434202Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:45ed46728977e9a3b78d235cc31049b050c0a911ccb6884f9f5a6d790c6e06ad",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/cowrie"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:ff37c322037ad8c1f4f05c2c93f7b60cc5f56b7f37a2c4cbc16901ec70bddb5b",
+        "RepoTags": [
+            "ghcr.io/telekom-security/conpot:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/conpot@sha256:ff37c322037ad8c1f4f05c2c93f7b60cc5f56b7f37a2c4cbc16901ec70bddb5b"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-02T15:37:39.983551035Z",
+        "Config": {
+            "User": "conpot:conpot",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "exec /usr/bin/conpot --mibcache \"$CONPOT_TMP\" --temp_dir \"$CONPOT_TMP\" --template \"$CONPOT_TEMPLATE\" --logfile \"$CONPOT_LOG\" --config \"$CONPOT_CONFIG\""
+            ],
+            "WorkingDir": "/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "conpot",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true,
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "python3 /cpu_check.py $(pgrep -of conpot) 99"
+                ],
+                "Interval": 300000000000,
+                "Timeout": 30000000000,
+                "Retries": 3
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 98623892,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:bc23be9135637f1da34070a3b770f5a1f624ee9e49b17e1a1d0f342df04f992e",
+                "sha256:e6d7b0d2a3afe8150b13a193aa34c6dd9ae8182b7dc17ee79c0a9fea9be1d306"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.211085732Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:ff37c322037ad8c1f4f05c2c93f7b60cc5f56b7f37a2c4cbc16901ec70bddb5b",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/conpot"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:d61466f17572e4bfca19f4e7867bde175b6e3c88116e8b91ab01678bd7c0bbe4",
+        "RepoTags": [
+            "ghcr.io/telekom-security/ciscoasa:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/ciscoasa@sha256:d61466f17572e4bfca19f4e7867bde175b6e3c88116e8b91ab01678bd7c0bbe4"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-02T15:37:37.731105414Z",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "sh",
+                "-c",
+                "exec ./asa_server --ike-port 5000 --enable_ssl --port 8443 --verbose >> /var/log/ciscoasa/ciscoasa.log 2>&1"
+            ],
+            "WorkingDir": "/opt/asa_server/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "ciscoasa",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 20581668,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:fdbd82e9b17479d4324fe2489a652a5c9a3eb68e8f7cc157b1230a114b1ee0e5",
+                "sha256:7f55ab48a54962fca798c7cdd9802c90d8373e5790e4f259648a464044908577",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.080625251Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:d61466f17572e4bfca19f4e7867bde175b6e3c88116e8b91ab01678bd7c0bbe4",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/ciscoasa"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:145c95d3bd5f1f7527ac628bd6a00f1acc190eeecd72e4706d9c07fde63dae99",
+        "RepoTags": [
+            "ghcr.io/telekom-security/dicompot:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/dicompot@sha256:145c95d3bd5f1f7527ac628bd6a00f1acc190eeecd72e4706d9c07fde63dae99"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-02T15:37:35.709223528Z",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "./dicompot"
+            ],
+            "Cmd": [
+                "-ip",
+                "0.0.0.0",
+                "-dir",
+                "images",
+                "-log",
+                "/var/log/dicompot/dicompot.log"
+            ],
+            "WorkingDir": "/opt/dicompot",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "dicompot",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 12962164,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:cde097f0f9c8afa4f337810faef99a4c859f6a3a87c0ff9df8f7cbfd57a9199e",
+                "sha256:251f05b99c305a39889534638aecc3fe9e8a14c76f09f3412ac0a2d4fd6c9653",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.217708341Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:145c95d3bd5f1f7527ac628bd6a00f1acc190eeecd72e4706d9c07fde63dae99",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/dicompot"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:e714934b0cd8606f2041ec0661e252182d6ec43300ed48566e565d1164d5f6a8",
+        "RepoTags": [
+            "ghcr.io/telekom-security/adbhoney:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/adbhoney@sha256:e714934b0cd8606f2041ec0661e252182d6ec43300ed48566e565d1164d5f6a8"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-02T15:37:33.432569342Z",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "./adbhoney"
+            ],
+            "WorkingDir": "/opt/adbhoney/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "adbhoney",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 15099767,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:fdbd82e9b17479d4324fe2489a652a5c9a3eb68e8f7cc157b1230a114b1ee0e5",
+                "sha256:3bb28e9da1b3ed74876a6c4526cce91e36f02e5594bcd5d195de4e8c2fc2915f",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.175061439Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:e714934b0cd8606f2041ec0661e252182d6ec43300ed48566e565d1164d5f6a8",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/adbhoney"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:47197396667e104b73f641d6a017c40ff1e37a82380273515a050f206377aff3",
+        "RepoTags": [
+            "ghcr.io/telekom-security/tpotinit:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/tpotinit@sha256:47197396667e104b73f641d6a017c40ff1e37a82380273515a050f206377aff3"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-02T12:29:04.203206324Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Entrypoint": [
+                "/opt/tpot/entrypoint.sh"
+            ],
+            "WorkingDir": "/opt/tpot",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "tpotinit",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGTERM",
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "test -f /tmp/success || exit 1"
+                ],
+                "Interval": 5000000000,
+                "Retries": 1000
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 25127449,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:a871e4c2f2815fa9a2e8715c545ef1d640116e00fd90dd1809355f8527d652be",
+                "sha256:ca07add748dee450e668ec31bdde7d0cf3fa97b39230ce02d75a2493ccbb8a72",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.291966567Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:47197396667e104b73f641d6a017c40ff1e37a82380273515a050f206377aff3",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/tpotinit"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:101c1e0f7b68e77a3eb64f5c989f9929875e918d743245ab28559024aeff89e0",
+        "RepoTags": [
+            "ghcr.io/telekom-security/rdphoneypot:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/rdphoneypot@sha256:101c1e0f7b68e77a3eb64f5c989f9929875e918d743245ab28559024aeff89e0"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-06-02T11:24:08.14096089Z",
+        "Config": {
+            "User": "2000:2000",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "./rdphoneypot"
+            ],
+            "WorkingDir": "/opt/rdphoneypot/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "rdphoneypot",
+                "com.docker.compose.version": "5.1.3"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 33800202,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:8e0d54314259705554c2075019ceb245adf88ee3cbe97acd2415b338aac1dbf9",
+                "sha256:dcd9de63f679937625ded586dab22314ea204c85e68720d6ae8955ef7ffd22c9",
+                "sha256:5a772b4a3b8c9dc1c0da4ea6e8af3b6d52b57ed5119a387a5c77ff4b81523b12",
+                "sha256:fa8471c3c1a45e20d145f26d5b4e55ca6ff26ff027d1ff12654ea3de117a5c5b",
+                "sha256:c6118d4dba705212ad2b92fe668b3814806ca75a8241b6ce9e2eefb02a156d58",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:45.412104635Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:101c1e0f7b68e77a3eb64f5c989f9929875e918d743245ab28559024aeff89e0",
+            "size": 1609
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/rdphoneypot"
+                }
+            ]
+        }
+    },
+    {
+        "Id": "sha256:819a0789ba0f2b66535097e847cb9b0380fed1c2a20a2b000ec18b51a6b3deb8",
+        "RepoTags": [
+            "ghcr.io/telekom-security/ewsposter:24.04.1"
+        ],
+        "RepoDigests": [
+            "ghcr.io/telekom-security/ewsposter@sha256:819a0789ba0f2b66535097e847cb9b0380fed1c2a20a2b000ec18b51a6b3deb8"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2025-08-28T10:08:03.535569004Z",
+        "Config": {
+            "User": "ews:ews",
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "/usr/bin/entrypoint.sh"
+            ],
+            "WorkingDir": "/",
+            "Labels": {
+                "com.docker.compose.project": "builder",
+                "com.docker.compose.service": "ewsposter",
+                "com.docker.compose.version": "2.39.1"
+            },
+            "StopSignal": "SIGINT",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 37815459,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:7003d23cc2176ec98ba2f8b3b4b9b5f144ef370e39bfcf6275a92b5064bc9261",
+                "sha256:a241a51f8b9e40811d044541cad56c7538f8fc4c640bcbea899917b81ba7b241",
+                "sha256:8c791eb1d02cbf1ebafcdafe812875ae82583661ff4a51c0aef45458440c1a5b"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-08-01T18:27:44.871695109Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:819a0789ba0f2b66535097e847cb9b0380fed1c2a20a2b000ec18b51a6b3deb8",
+            "size": 1607
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "ghcr.io/telekom-security/ewsposter"
+                }
+            ]
+        }
+    }
+]

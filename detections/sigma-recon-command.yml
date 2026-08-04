@@ -1,0 +1,36 @@
+title: Post-Authentication Recon Command in Honeypot Session
+id: 90341910-54b9-583a-a833-2dc75fe18c2e
+status: experimental
+description: >
+    Detects a command-level reconnaissance pattern (uname + id chained
+    together) observed immediately following successful authentication
+    in a honeypot session. Behavioral rule -- not tied to a specific
+    source IP or payload hash, so it also matches future actors using
+    the same recon pattern, not just this replay's campaign.
+references:
+    - 'Derived from evidence event_id=S-ed7d82-0000211-4, session_id=S-ed7d82-0000211-r0, evidence_marker=UBI-A6-SHARED-B1'
+    - 'See stix-bundle.json note object for the same locator'
+author: soc-stage6-analysis-pipeline
+date: 2026-08-04
+logsource:
+    category: honeypot
+    product: t-pot
+detection:
+    selection_auth:
+        action: auth_success
+    selection_command:
+        action: command
+        command|contains|all:
+            - 'uname'
+            - 'id'
+    timeframe: 5s
+    condition: selection_auth followed by selection_command within timeframe
+falsepositives:
+    - Legitimate administrative session-establishment scripts that happen
+      to run both commands for environment diagnostics (rare on a
+      honeypot, since there are no legitimate admins by definition, but
+      documented in case this rule is reused against real infrastructure)
+level: high
+tags:
+    - attack.discovery
+    - attack.t1082

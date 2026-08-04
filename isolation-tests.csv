@@ -1,0 +1,9 @@
+test_id,source,destination,port_or_protocol,expected,actual,utc_time,artifact,locator,result,notes
+ISO-01,management workstation,T-Pot management,64297,allow only from declared management IP,,,,,,
+ISO-02,untrusted test host,T-Pot management,64297,deny,,,,,,
+ISO-03,T-Pot sensor,RFC1918 10.0.0.0/8,all,deny,,,,,,
+ISO-04,T-Pot sensor,RFC1918 172.16.0.0/12,all,deny,,,,,,
+ISO-05,T-Pot sensor,RFC1918 192.168.0.0/16,all,deny,,,,,,
+ISO-06,T-Pot sensor,link-local metadata 169.254.169.254,HTTP,deny unless cloud control plane explicitly requires protected access,,,,,,
+ISO-07,internet,T-Pot honeypot ports,assigned,allow,,,,,,
+ISO-08,T-Pot sensor,DNS/NTP/update endpoints,required egress,allow and log,,,,,,
