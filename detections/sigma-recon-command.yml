@@ -11,7 +11,7 @@ references:
     - 'Derived from evidence event_id=S-ed7d82-0000211-4, session_id=S-ed7d82-0000211-r0, evidence_marker=UBI-A6-SHARED-B1'
     - 'See stix-bundle.json note object for the same locator'
 author: soc-stage6-analysis-pipeline
-date: 2026-08-04
+date: 2026-09-03
 logsource:
     category: honeypot
     product: t-pot
